@@ -3,14 +3,14 @@
 namespace Sevavietl\LoggableSoap;
 
 use Psr\Log\LogLevel;
-use Psr\Log\LoggerInterface;
+use Psr\Log\LoggerInterface as PsrLoggerInterface;
 
 final class Logger implements LoggerInterface
 {
     private $logger;   
     private $formatter;
 
-    public function __construct(LoggerInterface $logger, $formatter = null)
+    public function __construct(PsrLoggerInterface $logger, $formatter = null)
     {
         $this->logger = $logger;
         $this->formatter = $formatter ?: $this->getDefaultFormatter();
