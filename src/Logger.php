@@ -5,10 +5,10 @@ namespace Sevavietl\LoggableSoap;
 use Psr\Log\LogLevel;
 use Psr\Log\LoggerInterface;
 
-class Logger
+final class Logger implements LoggerInterface
 {
-    protected $logger;   
-    protected $formatter;
+    private $logger;   
+    private $formatter;
 
     public function __construct(LoggerInterface $logger, $formatter = null)
     {
@@ -16,7 +16,7 @@ class Logger
         $this->formatter = $formatter ?: $this->getDefaultFormatter();
     }
 
-    protected function getDefaultFormatter()
+    private function getDefaultFormatter()
     {
         return new MessageFormatter;
     }
