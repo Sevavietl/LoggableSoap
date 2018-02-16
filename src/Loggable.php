@@ -26,7 +26,7 @@ trait Loggable
         $version,
         $response
     ) {
-        if (null !== $this->logger) {
+        if (null === $this->logger) {
             return;
         }
 
