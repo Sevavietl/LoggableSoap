@@ -18,8 +18,7 @@ $logger = new Logger('default');
 $logger->pushHandler(new RotatingFileHandler('path/to/your.log'));
 $logger = new SoapLogger($logger);
 
-$client = new SoapClient($wsdl);
-$client->setLogger($logger);
+$client = new SoapClient($wsdl, $options, $logger);
 ```
 
 License
