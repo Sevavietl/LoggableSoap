@@ -1,0 +1,22 @@
+{
+    "name": "sevavietl/loggable-soap",
+    "type": "library",
+    "require": {
+        "psr/log": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sevavietl\\LoggableSoap\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vsevolod Vietluzhskykh",
+            "email": "sevavietl@gmail.com"
+        }
+    ]
+}
